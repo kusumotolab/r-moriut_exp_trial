@@ -4,11 +4,11 @@ FROM node:18-slim
 # 作業ディレクトリを指定
 WORKDIR /app
 
-# 必要なパッケージをインストール（vim，gitのインストール）
+# 必要なパッケージをインストール（git, vimのインストール）
 RUN apt-get update \
     && apt-get install -y \
-    vim \
     git \
+    vim \
     && rm -rf /var/lib/apt/lists/*
 
 # ローカルのアーカイブファイルをコンテナ内に追加し，展開
